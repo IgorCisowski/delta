@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DELTA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <span class="letter">D</span>
+      <span>E</span>
+      <div class="hidden"><span class="red">I</span> <span>L</span></div>
+      <div class="hidden"><span class="red">T</span> <span>T</span></div>
+      <img class="logoImage" src="delta.svg" alt="delta" />
+    </div>
+    <div class="slogan"><p>Where Ideas come to reality</p></div>
+    <script>
+      const tl = gsap.timeline();
+      tl.to(".logoImage", {
+        left: "60px",
+        duration: 0.2,
+        delay: 2,
+      });
+      tl.to(".red", {
+        color: "red",
+        duration: 0.5,
+        delay: 0.2,
+      });
+      tl.to(".logo", {
+        top: "20px",
+        left: "20px",
+        duration: 1,
+        delay: 0.5,
+      });
+      tl.fromTo(
+        ".slogan",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: 0.3,
+        }
+      );
+    </script>
+  </body>
+</html>
